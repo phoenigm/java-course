@@ -1,19 +1,30 @@
 package ru.phoenigm.java.course;
 
-import java.util.Scanner;
-
-public class Main {
+public class ClassExample {
 
     public static void main(String[] args) {
-        int[] array = {2, 4, 5};
 
-        // String + int = String
-        // String + String = String
+        Car car = new Car();
+        car.type = "BMW";
 
-        String line = "Мой возраст " + array[0] + " лет" ;
+        String name = "Azat";
+        int age = 222;
+        double height = 111.0;
 
-        System.out.println(line);
-        System.out.println("В строке символов: " + line.length());
+        Person person = new Person(name, age, height, car);
+        System.out.println("Name azat: " + person.name);
+        System.out.println("Height azat: " + person.height);
+        System.out.println("Age azat: " + person.age);
+
+
+        person.sayMyName();
+        person.sayMyHeight();
+        person.sayMyCarType();
+
+        Calculator calculator = new Calculator();
+        double plusResult = calculator.plus(2.02, 3.0);
+        System.out.println(plusResult);
+
     }
 
 
@@ -29,6 +40,7 @@ public class Main {
 
     /**
      * Нужно реализовать эту функцию sumArray
+     *
      * @param array входная переменная, в которой передается массив
      * @return сумма элементов всего переданного массива
      */
